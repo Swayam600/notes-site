@@ -1,0 +1,50 @@
+.form-container {
+	margin: 100px auto;
+	width: 100vw;
+	max-width: 500px;
+	box-shadow: 0 0 30px 20px var(--shadow);
+	padding: 20px;
+}
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+
+}
+form h2 {
+	color: var(--primary);
+	font-size: 30px;
+	margin: 20px;
+	text-align: center;
+}
+form div {
+	display: flex;
+	flex-direction: column;
+	margin: 20px 0;
+}
+form div span {
+	font-weight: 600;
+	color: var(--primary);
+}
+form .inputs {
+	background-color: var(--primary);
+	color: var(--secondary);
+	border: none;
+	outline: none;
+	resize: none;
+	padding: 10px;
+	font-size: 17px;
+}
+form button {
+	background-color: var(--primary);
+	color: var(--secondary);
+	border: none;
+	outline: none;
+	height: 40px;
+	font-size: 17px;
+	border-radius: 20px;
+	font-weight: 600;
+	margin: 10px 0;
+	cursor: pointer;
+}

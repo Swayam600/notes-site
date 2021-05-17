@@ -1,0 +1,65 @@
+.note-container {
+	width: 100vw;
+	max-width: 450px;
+	margin: 50px auto;
+	/*border: 1px solid red;*/
+}
+.note-card {
+	width: 100%;
+	max-width: 500px;
+	box-shadow: 0 0 40px 20px var(--shadow);
+	padding: 20px;
+}
+.note-card .note-heading {
+	color: var(--primary);
+	border-bottom: 1px solid var(--primary);
+	position: relative;
+	padding: 5px
+}
+
+
+.note-card .note-note {
+	padding-top: 10px;
+}
+.note-card .note-heading button {
+	border: none;
+	background: transparent;
+	color: var(--primary);
+	font-weight: 600;
+	outline: none;
+	position: absolute;
+	right: 10px;
+	padding: 0px;
+}
+.note-card .note-heading button span {
+	font-size: 20px;
+	transition: 0.3s;
+
+}
+.note-card .note-heading button ul {
+	list-style-type: none;
+	display: none;
+}
+.note-card .note-heading button:focus-within ul {
+	display: block;
+	position: absolute;
+	background: var(--secondary);
+	left: -80px;
+	/* border-radius: 10px; */
+	border: 1px solid var(--shadow);
+	transition: 0.5s;
+
+}
+.note-card .note-heading button:focus-within ul li {
+	margin: 10px;
+}
+.note-card .note-heading button:focus-within ul li a {
+	text-decoration: none;
+	color: var(--primary);
+	font-size: 15px;
+	/* padding: 10px; */
+	font-weight: 600;
+}
+.note-card .note-heading button:focus-within ul li:last-child a {
+	color: red;
+}

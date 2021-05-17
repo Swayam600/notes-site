@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+
+{% block headers %}
+	{% load static %}
+	<title>{% if note %} Modify {% else %} Add {% endif %} Note</title>
+	<link rel="stylesheet" href="{% static 'style/add_note.css' %}">
+{% endblock headers %}
+
+{% block body %}
+<div class="form-container">
+	<!-- where the url is going -->
+	<form method="post" action="{% if note %} {% url 'modify-page' note.id %} {% else %} {% url 'add-page' %} {% endif %}">
+		{% csrf_token %}
+		<h2>
+			<!-- Logic to show modify page or add page -->
+		{% if note %} Modify {% else %} Add {% endif %} 
+		note</h2>
+		<div class="title">
+			<span>Title: </span>
+			<input maxlength="20" value="{{ note.title }}" class="inputs" type="text" name="title" id="title">
+		</div>
+		<div class="content">
+			<span>Content: </span>
+			<textarea resizable="off" class="inputs" name="content" id="content" cols="30" rows="10" required>{{ note.content }}</textarea>
+		</div>
+		<button type="submit">{% if note %} Save {% else %} Add {% endif %}</button>
+	</form>
+</div>
+{% endblock body %}

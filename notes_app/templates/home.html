@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block headers %}
+<link rel="stylesheet" href="{% static 'style/home.css' %}">
+{% endblock headers %}
+
+{% block body %}
+<div class="note-container">
+	<div class="notes">
+		{% for note in notes %}
+		<div class="note-card">
+			<h3 class="note-heading">{{ note.title }} 
+				<button class="dots" data-id="1"><span>...</span>
+					<ul class="" data-ul-id="1">
+						<li><a href="{% url 'note-page' note.id %}">Read</a></li>
+						<li><a href="{% url 'modify-page' note.id %}">Modify</a></li>
+						<li><a href="{% url 'delete-page' note.id %}">Delete</a></li>
+					</ul>
+				</button>
+			</h3>
+			<p class="note-note">
+				{{ note.small }} ...
+			</p>
+		</div>
+		{% endfor %}
+
+	</div>
+</div>
+{% endblock body %}

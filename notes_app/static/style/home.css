@@ -1,0 +1,77 @@
+.notes {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+	padding: 20px;
+	max-width: 100vw;
+	width: 1500px;
+	margin: 0 auto;
+}
+.notes .note-card {
+	/* border-radius: 10px 10px 0 0; */
+	border: 1px solid var(--shadow);
+	height: 300px;
+	overflow: hidden;
+	box-shadow: 0 0 20px 7px var(--shadow);
+}
+.notes .note-card .note-heading {
+	padding: 10px;
+	border-radius: 10px 10px 0 0;
+	color: var(--primary);
+	position: relative;
+	border-bottom: 1px solid var(--primary);
+
+}
+.notes .note-card .note-note {
+	padding: 10px;
+}
+.notes .note-card .note-heading button {
+	border: none;
+	background: transparent;
+	color: var(--primary);
+	font-weight: 600;
+	outline: none;
+	position: absolute;
+	right: 10px;
+}
+.note-card .note-heading button span {
+	font-size: 20px;
+	transition: 0.3s;
+}
+.notes .note-card .note-heading button ul {
+	list-style-type: none;
+	display: none;
+}
+.notes .note-card .note-heading button:focus-within ul {
+	display: block;
+	position: absolute;
+	background: var(--secondary);
+	left: -80px;
+	/* border-radius: 10px; */
+	border: 1px solid var(--shadow);
+	transition: 0.5s;
+
+}
+.notes .note-card .note-heading button:focus-within ul li {
+	margin: 10px;
+}
+.notes .note-card .note-heading button:focus-within ul li a {
+	text-decoration: none;
+	color: var(--primary);
+	font-size: 15px;
+	/* padding: 10px; */
+	font-weight: 600;
+}
+.notes .note-card .note-heading button:focus-within ul li:last-child a {
+	color: red;
+}
+
+
+@media (min-width: 700px) {
+	.notes {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.note-card {
+		height: 200px;
+	}
+}
