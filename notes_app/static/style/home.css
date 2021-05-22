@@ -55,6 +55,22 @@
 .notes .note-card .note-heading button:focus-within ul li {
 	margin: 10px;
 }
+.notes .note-card .note-heading button:focus-within ul li::after {
+	content: '';
+	display: block;
+	width: 0;
+	left: 50%;
+	height: 2px;
+	background: var(--primary);
+	transition: 0.3s
+}
+.notes .note-card .note-heading button:focus-within ul li:last-child::after {
+	background: var(--yes);
+}
+.notes .note-card .note-heading button:focus-within ul li:hover::after {
+	left: 0;
+	width: 100%;
+}
 .notes .note-card .note-heading button:focus-within ul li a {
 	text-decoration: none;
 	color: var(--primary);
@@ -63,7 +79,7 @@
 	font-weight: 600;
 }
 .notes .note-card .note-heading button:focus-within ul li:last-child a {
-	color: red;
+	color: var(--yes);
 }
 
 

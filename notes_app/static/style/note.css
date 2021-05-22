@@ -61,5 +61,31 @@
 	font-weight: 600;
 }
 .note-card .note-heading button:focus-within ul li:last-child a {
-	color: red;
+	color: var(--yes);
+}
+.note-card .note-heading button:focus-within ul li::after {
+	content: '';
+	display: block;
+	width: 0;
+	left: 50%;
+	height: 2px;
+	background: var(--primary);
+	transition: 0.3s
+}
+.note-card .note-heading button:focus-within ul li:last-child::after {
+	background: var(--yes);
+}
+.note-card .note-heading button:focus-within ul li:hover::after {
+	left: 0;
+	width: 100%;
+}
+.note-card .note-heading button:focus-within ul li a {
+	text-decoration: none;
+	color: var(--primary);
+	font-size: 15px;
+	/* padding: 10px; */
+	font-weight: 600;
+}
+.note-card .note-heading button:focus-within ul li:last-child a {
+	color: var(--yes);
 }
