@@ -47,4 +47,24 @@ form button {
 	font-weight: 600;
 	margin: 10px 0;
 	cursor: pointer;
+	transition: 0.3s;
 }
+form button:hover {
+	transform: translateY(-5px)
+}
+
+
+/* Scrollbar style */
+.content textarea::-webkit-scrollbar {
+	background: var(--secondary);
+}
+
+.content textarea::-webkit-scrollbar-thumb {
+	background: var(--primary);
+	border-radius: 10px;
+}
+
+
+
+
+

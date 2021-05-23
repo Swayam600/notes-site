@@ -30,6 +30,13 @@ body {
 	color: white;
 	box-shadow: 0 0 30px 10px var(--shadow);	
 }
+.nav-wrapper img {
+	position: relative;
+	top: 10px;
+	width: 150px;
+	height: auto;
+	/* border: 2px solid white; */
+}
 .nav-wrapper .plus {
 	background: var(--secondary);
 	width: 50px;
